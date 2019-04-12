@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rangers 40th Anniversary</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Load Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" rel="stylesheet">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.1.11/carto.min.js"></script>
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <h1>Your Urban Park Ranger Story</h1>
+    
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='https://rangers40th.glitch.me/thanks.html';}"></iframe>
+    
+    <script>console.log(submitted);</script>
+    
+    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfaFbEDRQUl2MHsEaP-3vQ7Mhjb5LjuxXeB8ShiWNBsLevdKA/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+      <div>
+        <label for="your-name">Your name:</label>
+        <input id="your-name" type="text" name="entry.733194636" />
+      </div>
+      <div>
+        <label for="your-nickname">Your Ranger nickname:</label>
+        <input id="your-nickname" type="text" name="entry.1521427234" />
+      </div>
+      <div>
+        <label for="borough">Boroughs you worked in by year:</label>
+         <textarea id="your-borough" name="entry.183533859"></textarea>
+      </div>
+      <div>
+        <label for="park">Park/s you worked in as a Ranger:</label>
+        <input id="park" type="text" name="entry.952208446" />
+      </div>
+      <div>
+        <label for="years">Number of years you worked as a Ranger:</label>
+        <input id="years" type="number" name="entry.1979939955" />
+      </div>
+      <div>
+        <label for="program">What was your favorite program to lead?</label>
+        <input id="program" type="text" name="entry.177206820" />
+      </div>
+      <div>
+        <label for="animals">Animals you rescued:</label>
+        <input id="animals" type="text" name="entry.2095422559" />
+      </div>
+      <div>
+        <label for="your-say">Share a favorite story you have about working as an Urban Park Ranger:</label>
+        <textarea id="your-say" name="entry.481559172"></textarea>
+      </div>
+      <input class="latitude-field" id="latitude" type="hidden" name="entry.1447300004" />
+      <input class="longitude-field" id="longitude" type="hidden" name="entry.137987503" />
+      
+      <div>
+        <p>
+          Where did your story take place? Click the map to add a point.
+        </p>
+      </div>
+      <div id="map"></div>
+      
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
